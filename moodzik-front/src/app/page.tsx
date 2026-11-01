@@ -1,5 +1,12 @@
 "use client";
 
+import AppSidebar from "@/components/layout/AppSidebar";
+import AlbumCover from "@/components/music/AlbumCover";
+import Mp3MetadataExplorer from "@/components/music/Mp3MetadataExplorer";
+import MusicPlayer from "@/components/music/MusicPlayer";
+import PlaylistCard from "@/components/music/PlaylistCard";
+import SectionHeader from "@/components/music/SectionHeader";
+import TrackRow from "@/components/music/TrackRow";
 import {
   ChevronLeft,
   ChevronRight,
@@ -9,15 +16,8 @@ import {
   Radio,
   Search,
 } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-
-import AppSidebar from "@/components/layout/AppSidebar";
-import AlbumCover from "@/components/music/AlbumCover";
-import Mp3MetadataExplorer from "@/components/music/Mp3MetadataExplorer";
-import MusicPlayer from "@/components/music/MusicPlayer";
-import PlaylistCard from "@/components/music/PlaylistCard";
-import SectionHeader from "@/components/music/SectionHeader";
-import TrackRow from "@/components/music/TrackRow";
 
 import type { ImportedAudioTrack, Track } from "@/types/music";
 
@@ -680,17 +680,15 @@ export default function HomePage() {
                     </div>
 
                     <div className="flex gap-6 text-xs text-[#b3b3b3]">
-                      <a href="#about" className="hover:text-white">
+                      <Link href="/about" className="hover:text-white">
                         About
-                      </a>
-
-                      <a href="#privacy" className="hover:text-white">
+                      </Link>
+                      <Link href="/privacy" className="hover:text-white">
                         Privacy
-                      </a>
-
-                      <a href="#terms" className="hover:text-white">
+                      </Link>
+                      <Link href="/terms" className="hover:text-white">
                         Terms
-                      </a>
+                      </Link>
                     </div>
                   </div>
 
