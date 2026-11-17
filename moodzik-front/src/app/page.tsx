@@ -1,6 +1,5 @@
 "use client";
 
-import AppSidebar from "@/components/layout/AppSidebar";
 import AlbumCover from "@/components/music/AlbumCover";
 import Mp3MetadataExplorer from "@/components/music/Mp3MetadataExplorer";
 import MusicPlayer from "@/components/music/MusicPlayer";
@@ -355,14 +354,6 @@ export default function HomePage() {
   return (
     <main className="h-dvh min-h-130 overflow-hidden bg-black p-2 text-white">
       <div className="flex h-[calc(100%-84px)] min-h-0 gap-2">
-        {/* Sidebar */}
-        <AppSidebar
-          activeNav={activeNav}
-          setActiveNav={setActiveNav}
-          mobileMenuOpen={mobileMenuOpen}
-          setMobileMenuOpen={setMobileMenuOpen}
-        />
-
         {/* Main content */}
         <section
           id="home"

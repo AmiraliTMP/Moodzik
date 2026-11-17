@@ -1,4 +1,8 @@
 import type { Metadata, Viewport } from "next";
+
+import AppShell from "@/components/layout/AppShell";
+import { MusicProvider } from "@/context/MusicContext";
+
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -35,7 +39,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-[#121212] text-white antialiased">
-        {children}
+        <MusicProvider>
+          <AppShell>{children}</AppShell>
+        </MusicProvider>
       </body>
     </html>
   );
